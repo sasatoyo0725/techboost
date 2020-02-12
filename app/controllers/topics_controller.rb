@@ -4,11 +4,7 @@ class TopicsController < ApplicationController
   end
   
   def new
-    if logged_in?
-     @topic = Topic.new
-    else
-     redirect_to login_path, info: 'ログインしてください'
-    end
+   @topic = Topic.new
   end
   
   def create
