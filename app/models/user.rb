@@ -3,6 +3,7 @@ class User < ApplicationRecord
   VALID_PASSWORD_REGEX = /\A(?=.*?[a-z])[a-z\d]{8,32}+\z/ 
   
   has_secure_password
+  has_many :topics
   
   validates :name, presence: true, length: {maximum: 15}
   validates :email, presence: true, format: {with: VALID_EMAIL_REGEX}
