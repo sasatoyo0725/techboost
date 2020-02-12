@@ -4,6 +4,7 @@ class User < ApplicationRecord
   
   has_secure_password
   has_many :topics
+  has_many :favorites
   
   validates :name, presence: true, length: {maximum: 15}
   validates :email, presence: true, format: {with: VALID_EMAIL_REGEX}
