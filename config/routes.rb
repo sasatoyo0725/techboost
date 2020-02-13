@@ -7,6 +7,9 @@ Rails.application.routes.draw do
   get 'pages/help' 
   resources :users
   resources :topics
+  
+  get 'favorites/index'
+  post '/favorites', to: 'favories#create'
 
   get    '/login',   to: 'sessions#new'
   post   '/login',   to: 'sessions#create'
