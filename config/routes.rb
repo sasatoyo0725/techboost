@@ -9,7 +9,8 @@ Rails.application.routes.draw do
   resources :topics
   
   get 'favorites/index'
-  post '/favorites', to: 'favories#create'
+  post '/favorites', to: 'favorites#create'
+  
 
   get    '/login',   to: 'sessions#new'
   post   '/login',   to: 'sessions#create'
